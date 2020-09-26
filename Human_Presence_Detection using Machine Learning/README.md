@@ -3,7 +3,7 @@ This project uses temeperature,co2 level,humidity and light data to detect the p
 
 
 
-The accuracy is 0.99
+The test accuracy in RandomForestClassifier is 0.99 and for LinearSVC it is 0.98
 
 
 
