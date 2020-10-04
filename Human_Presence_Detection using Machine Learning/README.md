@@ -8,4 +8,4 @@ The test accuracy in RandomForestClassifier is 0.99 and for LinearSVC it is 0.98
 
 
 
-The data set is got from http://archive.ics.uci.edu/ml/datasets/Occupancy+Detection+
+The data set is got from http://archive.ics.uci.edu/ml/datasets/Occupancy+Detection+ UC Irvine
