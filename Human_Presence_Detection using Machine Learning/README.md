@@ -1,4 +1,10 @@
-This project uses temeperature,co2 level,humidity and light data to detect the presence of a human being in the room using Machine Learning. I have used LinearSVC and RandomForestClassifier models.
+## Project Description
+This project uses,
+1. Temeperature
+2. Co2 level
+3. Humidity 
+4. Light data 
+to detect the presence of a human being in the room using Machine Learning. I have used LinearSVC and RandomForestClassifier models.
 
 
 
