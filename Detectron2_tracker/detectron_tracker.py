@@ -24,7 +24,6 @@ cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.6
 cfg.MODEL.WEIGHTS = model_zoo.get_checkpoint_url('COCO-Detection/faster_rcnn_R_50_FPN_3x.yaml')
 cfg.MODEL.DEVICE='cpu'#remove this if you are using gpu
 input_path = sys.argv[1]
-output_path= sys.argv[2]
 cap=cv2.VideoCapture(input_path)
 writer = None
 while True:
@@ -71,7 +70,7 @@ while True:
   if writer is None:
     
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')
-    writer = cv2.VideoWriter(output_path, fourcc, 15,
+    writer = cv2.VideoWriter('out.mp4', fourcc, 15,
       (image.shape[1], image.shape[0]), True)
 
   writer.write(image)      
