@@ -30,11 +30,10 @@ while True:
   ret,image=cap.read()
   predictor=DefaultPredictor(cfg)
   outputs = predictor(image)
-  v = Visualizer(image[:, :, ::-1], MetadataCatalog.get(cfg.DATASETS.TRAIN[0]), scale=0.5,)
   dets=[]
   for ind,data in enumerate(outputs["instances"].pred_classes):
     num=data.item()
-    if num==0:
+    if MetadataCatalog.get(cfg.DATASETS.TRAIN[0]).thing_classes[num]=='person': #you can track any other class as well
       box=outputs['instances'].pred_boxes[ind]
       box=box.tensor.cpu().numpy()
       box=box[0].tolist()
